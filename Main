@@ -1,0 +1,26 @@
+package Dolar;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import CurrencyConverter.CurrencyConverter;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		CurrencyConverter cc = new CurrencyConverter();
+				
+		System.out.println("What is the dollar price?");
+		cc.value = sc.nextDouble();
+		System.out.println("How many dollars will be bought?");
+		cc.amount = sc.nextInt();
+		cc.totalValue = cc.calc();
+		cc.totalValue = cc.iof();
+		System.out.println(cc);
+		
+		sc.close();
+	}
+}
