@@ -1,0 +1,25 @@
+package CurrencyConverter;
+
+
+public class CurrencyConverter {
+
+
+	public double value;
+	public int amount;
+	public double iof = 0.06;
+	public double totalValue;
+
+	
+public double calc() {
+	return value * amount;	
+		}
+public double iof() {
+	return totalValue * iof + totalValue;
+}
+
+public String toString() {
+	return "Amount to be paid in reais = "
+	+ String.format("%.2f", totalValue);
+}
+
+	}
